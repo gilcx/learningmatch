@@ -1,0 +1,111 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #02836a, #01241d);
+    color: white;
+    margin: 0;
+  }
+  
+  .text {
+    color: black;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center; /* Center the text */
+  }
+  
+  .gradientText {
+    font-size: 4.0rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #002921, #01a584);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center; /* Center the gradient text */
+  }
+  
+  .textBackground {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 800px;
+  }
+  
+  .formContainer {
+    width: 100%;
+    max-width: 60%; /* Limits the width to 70% of its parent */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align the form elements */
+    gap: 1rem;
+    margin: 0 auto; /* Centers the container horizontally */
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%; /* Ensure form takes full width of formContainer */
+  }
+  
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    width: 100%;
+  }
+  
+  .nameContainer {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .inputWrapper label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .inputWrapper input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    color: black;
+    width: 100%;
+  }
+  
+  .button {
+    background-color: #02836a;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #ffc400;
+  }
+  
+  .loginText {
+    text-align: left;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .loginLink {
+    color: #02836a;
+    text-decoration: none;
+  }
+  
+  .loginLink:hover {
+    text-decoration: underline;
+  }
+  
