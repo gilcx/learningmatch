@@ -1,12 +1,13 @@
 .container {
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Let the content grow upwards */
     align-items: center;
     background: linear-gradient(to bottom, #02836a, #01241d);
     color: black;
     margin: 0;
+    padding: 20px; /* Add padding to give space around the content */
+    min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
 }
 
 .text {
@@ -24,7 +25,31 @@
     -webkit-text-fill-color: transparent;
     text-align: center;
 }
+.learningMatchButton {
+    display: flex;
+    align-items: center; /* Align the icon and text in a row */
+    justify-content: center; /* Centers the content inside the button */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    color: black; /* Text color */
+    font-size: 2.5rem; /* Adjust the font size */
+    font-weight: bold;
+    cursor: pointer; /* Make the button clickable */
+    padding: 10px 20px;
+    gap: 10px; /* Space between the icon and text */
+    transition: color 0.3s; /* Smooth transition for color change */
+    margin: 0 auto; /* Center the button horizontally */
+}
 
+.learningMatchButton:hover {
+    color: #02836a; /* Change text color on hover */
+}
+
+.icon {
+    width: 30px; /* Adjust the icon size */
+    height: 30px;
+    object-fit: contain; /* Ensure the icon is contained within its bounds */
+}
 .textBackground {
     text-align: center;
     background-color: white;
@@ -32,9 +57,9 @@
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 800px;
-    position: relative; /* Add position relative to allow absolute positioning of Save button */
+    position: relative; /* Allows for positioning of Save button */
+    margin: 0 auto; /* Centers the textBackground container */
 }
-
 .formContainer {
     width: 100%;
     max-width: 75%;
@@ -65,36 +90,36 @@
     width: 100%;
 }
 
-
 .inputWrapper label {
     margin-bottom: 0.5rem;
     font-size: 1rem;
     color: black;
 }
+
 .preferencesContainer {
     display: flex;
-    flex-wrap: wrap; /* Allow the elements to wrap to the next line */
+    flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
 }
 
 .inputWrapper input, 
-.inputWrapper select  {
+.inputWrapper select {
     padding: 0.5rem;
     font-size: 1rem;
     border: 2px solid #000000;
     border-radius: 5px;
     color: black;
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
+    box-sizing: border-box;
 }
+
 .inputWrapper select {
-    -webkit-appearance: none; /* Removes default styling for select in some browsers */
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding-right: 30px; /*space for dropdown arrow */
-  }
-  
+    padding-right: 30px;
+}
 
 .button {
     background-color: #02836a;
@@ -130,26 +155,22 @@
     font-weight: bold;
     color: black;
 }
-.nameContainer {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-}
 
 .nameContainer input {
     padding: 0.5rem;
     font-size: 1rem;
-    border: 2px solid #000000; /* Visible border */
+    border: 2px solid #000000;
     border-radius: 5px;
     color: black;
     width: 100%;
-    box-sizing: border-box; /* Ensures padding and border don't affect the width */
-    outline: none; /* Remove default outline */
+    box-sizing: border-box;
+    outline: none;
 }
+
 .saveButton {
     position: absolute;
-    bottom: 20px; 
-    right: 20px; 
+    bottom: 20px;
+    right: 20px;
     background-color: #02836a;
     color: white;
     border: none;

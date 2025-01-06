@@ -1,83 +1,130 @@
 /* General layout */
 .container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .sidebar {
-    width: 250px;
-    background: linear-gradient(to bottom, #02836a, #01241d);
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .content {
-    flex-grow: 1;
-    background-color: white;
-  }
-  
-  .menuButton {
-    background-color: white;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    border-radius: 11px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center; /* Aligns icon and text vertically */
-    gap: 10px; /* Space between icon and text */
-    font-weight: bold;
-    width: 100%; /* Ensures all buttons have the same width */
-    box-sizing: border-box; /* Includes padding in width calculations */
-    text-align: center; /* Ensures text alignment */
-    position: relative; /* Enables positioning adjustments */
-    justify-content: center;
-    margin-top: 30px; 
-  }
-  
-  .menuButton img {
-    position: absolute;
-    left: 15px; /* Keeps the icon fixed to the left */
-  }
-  
-  .menuButton span {
-    flex: 1; /* Allows the text to take up available space */
-    text-align: center; /* Centers the text within its container */
-  }
-  .menuButton:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Submenu styling */
-  .subMenu {
-    margin-left: 15px;
-    margin-top: 5px;
-  }
-  
-  .subMenuButton {
-    background-color: white;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 5px 15px;
-    text-align: left;
-    font-size: 16px;
-    border-radius: 13px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .subMenuButton:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Logout Icon Styling */
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #02836a, #01241d);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  flex-grow: 1;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Menu Button Styling */
+.menuButton {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center; /* Aligns icon and text vertically */
+  gap: 10px; /* Space between icon and text */
+  font-weight: bold;
+  width: 100%; /* Ensures all buttons have the same width */
+  box-sizing: border-box; /* Includes padding in width calculations */
+  text-align: center; /* Ensures text alignment */
+  position: relative; /* Enables positioning adjustments */
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.menuButton img {
+  position: absolute;
+  left: 15px; /* Keeps the icon fixed to the left */
+}
+
+.menuButton span {
+  flex: 1; /* Allows the text to take up available space */
+  text-align: center; /* Centers the text within its container */
+}
+
+.menuButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Submenu Styling */
+.subMenu {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.subMenuButton {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 15px;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+.subMenuButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Logout Icon Styling */
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Gradient text styling for LearningMatch */
+.gradientTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gradientText {
+  font-size: 4.0rem;
+  background: linear-gradient(to right, #002921, #01a584);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* Divided sections */
+.topSection {
+  height: 65%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bottomSection {
+  height: 35%;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

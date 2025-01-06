@@ -1,12 +1,40 @@
 "use client";
 import styles from './page.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Profile() {
   const [courses, setCourses] = useState([{ courseCode: '', grade: '' }]);
   const [province, setProvince] = useState('');
   const [preferences, setPreferences] = useState(['', '', '', '']);
-  
+  const [highSchool, setHighSchool] = useState('');
+
+  // Load data from sampledata.json
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/samplepreferences.json');
+        const data = await response.json();
+
+        if (data.length > 0) {
+          const studentData = data[0]; // Assuming there's only one student data object in the array
+          setProvince(studentData.province);
+          setPreferences(studentData.preferences);
+          setHighSchool(studentData.highschool);
+          setCourses(
+            Object.entries(studentData.currentcourses).map(([courseCode, grade]) => ({
+              courseCode,
+              grade
+            }))
+          );
+        }
+      } catch (error) {
+        console.error('Error fetching student data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const addCourse = () => {
     setCourses([...courses, { courseCode: '', grade: '' }]);
   };
@@ -37,7 +65,10 @@ export default function Profile() {
   return (
     <div className={styles.container}>
       <div className={styles.textBackground}>
-        <span className={styles.gradientText}>LearningMatch</span>
+        <button className={styles.learningMatchButton} onClick={() => window.location.href = '/home'}>
+          <img src="/home.png" alt="Home Icon" className={styles.icon} />
+          <span className={styles.gradientText}>LearningMatch</span>
+        </button>
         <h1 className={styles.text}><strong>Your Profile</strong></h1>
 
         <div className={styles.formContainer}>
@@ -46,7 +77,7 @@ export default function Profile() {
             <div className={styles.nameContainer}>
               <div className={styles.inputWrapper}>
                 <label htmlFor="grade">Grade</label>
-                <input type="text" id="grade" name="grade" required />
+                <input type="text" id="grade" name="grade" value="10" readOnly required />
               </div>
 
               <div className={styles.inputWrapper}>
@@ -69,7 +100,7 @@ export default function Profile() {
             {/* High School input */}
             <div className={styles.inputWrapper}>
               <label htmlFor="highSchool">High School</label>
-              <input type="text" id="highSchool" name="highSchool" required />
+              <input type="text" id="highSchool" name="highSchool" value={highSchool} onChange={(e) => setHighSchool(e.target.value)} required />
             </div>
 
             {/* Horizontal Line with Text */}
