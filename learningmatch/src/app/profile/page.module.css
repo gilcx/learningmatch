@@ -37,7 +37,7 @@
 
 .formContainer {
     width: 100%;
-    max-width: 60%;
+    max-width: 75%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -65,10 +65,17 @@
     width: 100%;
 }
 
+
 .inputWrapper label {
     margin-bottom: 0.5rem;
     font-size: 1rem;
     color: black;
+}
+.preferencesContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow the elements to wrap to the next line */
+    gap: 1rem;
+    width: 100%;
 }
 
 .inputWrapper input, 

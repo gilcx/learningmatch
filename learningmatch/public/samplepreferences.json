@@ -1,0 +1,19 @@
+[
+    {
+        "grade": "10",
+        "province": "Ontario",
+        "highschool": "St Mary CSS",
+        "preferences": [
+            "Technology", "Engineering", "Computing", 
+            "Environmental Science"
+        ],
+        "currentcourses": {
+            "MPM2D": 92,  
+            "SNC2D": 89,  
+            "ICS2O": 94,  
+            "SPH3U": 85, 
+            "ENG2D": 88,  
+            "CHC2D": 93   
+        }
+    }
+]
