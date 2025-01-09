@@ -9,7 +9,23 @@
     padding: 20px; /* Add padding to give space around the content */
     min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
 }
-
+.homeButtonContainer {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+  }
+  
+  .homeButton {
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .homeIcon {
+    width: 60px;
+    height: 60px;
+  }
 .text {
     color: black;
     font-size: 1.6rem;

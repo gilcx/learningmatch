@@ -117,6 +117,14 @@ export default function Profile() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.homeButtonContainer}>
+        <button
+          className={styles.homeButton}
+          onClick={() => window.location.href = '/home'}
+        >
+          <img src="/home2.png" alt="Home" className={styles.homeIcon} />
+        </button>
+        </div>
       <div className={styles.textBackground}>
         <button className={styles.learningMatchButton} onClick={() => window.location.href = '/home'}>
           <img src="/home.png" alt="Home Icon" className={styles.icon} />
