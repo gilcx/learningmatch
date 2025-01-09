@@ -1,11 +1,16 @@
 "use client";
 import styles from './page.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-
+    useEffect(() => {
+      // If the user is already signed in, redirect to the home page
+      if (sessionStorage.getItem("userEmail")) {
+        window.location.href = '/home'; // Redirect using window.location.href
+      }
+    }, []);
     const handleLogin = async (e) => {
         e.preventDefault();
 

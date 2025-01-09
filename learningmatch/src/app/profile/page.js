@@ -7,33 +7,47 @@ export default function Profile() {
   const [province, setProvince] = useState('');
   const [preferences, setPreferences] = useState(['', '', '', '']);
   const [highSchool, setHighSchool] = useState('');
+  const [grade, setGrade] = useState('');
+  const [userEmail, setUserEmail] = useState(null); // Store userEmail here
 
-  // Load data from sampledata.json
+  // UseEffect to safely access sessionStorage in the client-side
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/samplepreferences.json');
-        const data = await response.json();
+    if (typeof window !== 'undefined') {
+      const email = sessionStorage.getItem("userEmail");
+      setUserEmail(email); // Set the email only on the client-side
 
-        if (data.length > 0) {
-          const studentData = data[0]; // Assuming there's only one student data object in the array
-          setProvince(studentData.province);
-          setPreferences(studentData.preferences);
-          setHighSchool(studentData.highschool);
-          setCourses(
-            Object.entries(studentData.currentcourses).map(([courseCode, grade]) => ({
-              courseCode,
-              grade
-            }))
-          );
-        }
-      } catch (error) {
-        console.error('Error fetching student data:', error);
+      // Fetch student data if userEmail is available
+      if (email) {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('/samplepreferences.json');
+            const data = await response.json();
+
+            // Find the student data with matching email
+            const studentData = data.find((student) => student.email === email);
+
+            if (studentData) {
+              // Populate form fields with student data
+              setGrade(studentData.grade);
+              setProvince(studentData.province);
+              setPreferences(studentData.preferences || ['', '', '', '']);
+              setHighSchool(studentData.highschool || '');
+              setCourses(
+                Object.entries(studentData.currentcourses || {}).map(([courseCode, grade]) => ({
+                  courseCode,
+                  grade
+                }))
+              );
+            }
+          } catch (error) {
+            console.error('Error fetching student data:', error);
+          }
+        };
+
+        fetchData();
       }
-    };
-
-    fetchData();
-  }, []);
+    }
+  }, []); // Empty dependency array to run once on component mount
 
   const addCourse = () => {
     setCourses([...courses, { courseCode: '', grade: '' }]);
@@ -49,6 +63,45 @@ export default function Profile() {
     const updatedPreferences = [...preferences];
     updatedPreferences[index] = value;
     setPreferences(updatedPreferences);
+  };
+
+  const handleSave = async () => {
+    if (!userEmail) {
+      alert("No user email found in session.");
+      return;
+    }
+
+    const updatedStudent = {
+      email: userEmail,
+      grade, // Use the grade from state
+      province,
+      highschool: highSchool,
+      preferences,
+      currentcourses: courses.reduce((acc, course) => {
+        acc[course.courseCode] = course.grade;
+        return acc;
+      }, {})
+    };
+
+    try {
+      const response = await fetch('/api/userprofile', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedStudent),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        alert(result.message);
+      } else {
+        alert(result.error);
+      }
+    } catch (error) {
+      console.error('Error saving student data:', error);
+      alert('Error saving student data.');
+    }
   };
 
   const provinces = [
@@ -77,7 +130,7 @@ export default function Profile() {
             <div className={styles.nameContainer}>
               <div className={styles.inputWrapper}>
                 <label htmlFor="grade">Grade</label>
-                <input type="text" id="grade" name="grade" value="10" readOnly required />
+                <input type="text" id="grade" name="grade" value={grade} onChange={(e) => setGrade(e.target.value)} required />
               </div>
 
               <div className={styles.inputWrapper}>
@@ -158,7 +211,7 @@ export default function Profile() {
             {/* Add More Rows Button */}
             <button type="button" className={styles.button} onClick={addCourse}>+</button>
           </form>
-          <button className={styles.saveButton}>Save</button>
+          <button className={styles.saveButton} onClick={handleSave}>Save</button>
         </div>
       </div>
     </div>

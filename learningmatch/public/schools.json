@@ -1,0 +1,325 @@
+[
+    {
+      "school": "University of Ontario",
+      "province": "Ontario",
+      "programs": [
+        {
+          "name": "Computer Science",
+          "fields": ["Technology", "Computing"]
+        },
+        {
+          "name": "Environmental Engineering",
+          "fields": ["Engineering", "Environmental Science"]
+        }
+      ]
+    },
+    {
+      "school": "Western University",
+      "province": "Ontario",
+      "programs": [
+        {
+          "name": "Business Administration",
+          "fields": ["Business & Finance"]
+        },
+        {
+          "name": "Nursing",
+          "fields": ["Health"]
+        }
+      ]
+    },
+    {
+      "school": "Ryerson University",
+      "province": "Ontario",
+      "programs": [
+        {
+          "name": "Graphic Design",
+          "fields": ["Arts & Design"]
+        },
+        {
+          "name": "Social Work",
+          "fields": ["Social Sciences", "Education"]
+        }
+      ]
+    },
+    {
+      "school": "University of Waterloo",
+      "province": "Ontario",
+      "programs": [
+        {
+          "name": "Software Engineering",
+          "fields": ["Technology", "Engineering"]
+        },
+        {
+          "name": "Physics",
+          "fields": ["Science", "Technology"]
+        }
+      ]
+    },
+    {
+      "school": "Carleton University",
+      "province": "Ontario",
+      "programs": [
+        {
+          "name": "Psychology",
+          "fields": ["Social Sciences"]
+        },
+        {
+          "name": "Economics",
+          "fields": ["Business & Finance", "Social Sciences"]
+        }
+      ]
+    },
+    {
+      "school": "Seneca College",
+      "province": "Ontario",
+      "programs": [
+        {
+          "name": "Animation",
+          "fields": ["Arts & Design", "Technology"]
+        },
+        {
+          "name": "Business Management",
+          "fields": ["Business & Finance"]
+        }
+      ]
+    },
+    {
+      "school": "Humber College",
+      "province": "Ontario",
+      "programs": [
+        {
+          "name": "Culinary Arts",
+          "fields": ["Arts & Design"]
+        },
+        {
+          "name": "Cybersecurity",
+          "fields": ["Technology", "Engineering"]
+        }
+      ]
+    },
+    {
+      "school": "Fanshawe College",
+      "province": "Ontario",
+      "programs": [
+        {
+          "name": "Nursing",
+          "fields": ["Health"]
+        },
+        {
+          "name": "Game Development",
+          "fields": ["Arts & Design", "Technology"]
+        }
+      ]
+    },
+    {
+      "school": "Centennial College",
+      "province": "Ontario",
+      "programs": [
+        {
+          "name": "Aviation Maintenance",
+          "fields": ["Engineering", "Technology"]
+        },
+        {
+          "name": "Early Childhood Education",
+          "fields": ["Education"]
+        }
+      ]
+    },
+    {
+      "school": "University of British Columbia",
+      "province": "British Columbia",
+      "programs": [
+        {
+          "name": "Electrical Engineering",
+          "fields": ["Engineering", "Technology"]
+        },
+        {
+          "name": "Sustainable Development",
+          "fields": ["Environmental Science", "Technology"]
+        }
+      ]
+    },
+    {
+      "school": "Simon Fraser University",
+      "province": "British Columbia",
+      "programs": [
+        {
+          "name": "Health Sciences",
+          "fields": ["Health"]
+        },
+        {
+          "name": "Film Production",
+          "fields": ["Arts & Design"]
+        }
+      ]
+    },
+    {
+      "school": "University of Victoria",
+      "province": "British Columbia",
+      "programs": [
+        {
+          "name": "Marine Biology",
+          "fields": ["Environmental Science", "Technology"]
+        },
+        {
+          "name": "Psychology",
+          "fields": ["Social Sciences"]
+        }
+      ]
+    },
+    {
+      "school": "Capilano University",
+      "province": "British Columbia",
+      "programs": [
+        {
+          "name": "Tourism Management",
+          "fields": ["Business & Finance", "Social Sciences"]
+        },
+        {
+          "name": "Education Studies",
+          "fields": ["Education"]
+        }
+      ]
+    },
+    {
+      "school": "British Columbia Institute of Technology",
+      "province": "British Columbia",
+      "programs": [
+        {
+          "name": "Mechanical Engineering",
+          "fields": ["Engineering", "Technology"]
+        },
+        {
+          "name": "Architectural Science",
+          "fields": ["Arts & Design", "Engineering"]
+        }
+      ]
+    },
+    {
+      "school": "Douglas College",
+      "province": "British Columbia",
+      "programs": [
+        {
+          "name": "Criminal Justice",
+          "fields": ["Social Sciences", "Education"]
+        },
+        {
+          "name": "Business Administration",
+          "fields": ["Business & Finance"]
+        }
+      ]
+    },
+    {
+      "school": "Langara College",
+      "province": "British Columbia",
+      "programs": [
+        {
+          "name": "Health Informatics",
+          "fields": ["Health", "Technology"]
+        },
+        {
+          "name": "Fine Arts",
+          "fields": ["Arts & Design"]
+        }
+      ]
+    },
+    {
+      "school": "University of Calgary",
+      "province": "Alberta",
+      "programs": [
+        {
+          "name": "Mechanical Engineering",
+          "fields": ["Engineering", "Technology"]
+        },
+        {
+          "name": "Environmental Science",
+          "fields": ["Environmental Science"]
+        }
+      ]
+    },
+    {
+      "school": "University of Alberta",
+      "province": "Alberta",
+      "programs": [
+        {
+          "name": "Civil Engineering",
+          "fields": ["Engineering", "Technology"]
+        },
+        {
+          "name": "Business Management",
+          "fields": ["Business & Finance"]
+        }
+      ]
+    },
+    {
+      "school": "Mount Royal University",
+      "province": "Alberta",
+      "programs": [
+        {
+          "name": "Broadcasting",
+          "fields": ["Arts & Design", "Technology"]
+        },
+        {
+          "name": "Early Childhood Education",
+          "fields": ["Education"]
+        }
+      ]
+    },
+    {
+      "school": "Southern Alberta Institute of Technology",
+      "province": "Alberta",
+      "programs": [
+        {
+          "name": "Health Informatics",
+          "fields": ["Health", "Technology"]
+        },
+        {
+          "name": "Energy Systems Engineering",
+          "fields": ["Engineering", "Environmental Science"]
+        }
+      ]
+    },
+    {
+      "school": "MacEwan University",
+      "province": "Alberta",
+      "programs": [
+        {
+          "name": "Fine Arts",
+          "fields": ["Arts & Design"]
+        },
+        {
+          "name": "Social Sciences",
+          "fields": ["Social Sciences"]
+        }
+      ]
+    },
+    {
+      "school": "Bow Valley College",
+      "province": "Alberta",
+      "programs": [
+        {
+          "name": "Practical Nursing",
+          "fields": ["Health"]
+        },
+        {
+          "name": "Business Administration",
+          "fields": ["Business & Finance"]
+        }
+      ]
+    },
+    {
+      "school": "NorQuest College",
+      "province": "Alberta",
+      "programs": [
+        {
+          "name": "Healthcare Aide",
+          "fields": ["Health"]
+        },
+        {
+          "name": "Community Support Worker",
+          "fields": ["Social Sciences", "Education"]
+        }
+      ]
+    }
+  ]
+  

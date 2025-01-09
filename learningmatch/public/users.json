@@ -1,10 +1,26 @@
 [
-    {
-      "email": "emil@queens.ca",
-      "password": "emil2025"
-    },
-    {
-      "email": "testuser@example.com",
-      "password": "password123"
-    }
-  ]
+  {
+    "firstName": "Emil",
+    "lastName": "V.",
+    "email": "emil@queens.ca",
+    "password": "emil2025"
+  },
+  {
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "testuser@example.com",
+    "password": "password123"
+  },
+  {
+    "firstName": "Chris",
+    "lastName": "G",
+    "email": "chris@email.com",
+    "password": "mypass"
+  },
+  {
+    "firstname": "Christian",
+    "lastname": "B",
+    "email": "christian@email.com",
+    "password": "eow"
+  }
+]

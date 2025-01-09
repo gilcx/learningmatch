@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Let the content grow upwards */
+    align-items: center;
+    background: linear-gradient(to bottom, #02836a, #01241d);
+    color: black;
+    margin: 0;
+    padding: 20px; /* Add padding to give space around the content */
+    min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+}
+.homeButtonContainer {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+  }
+  
+  .homeButton {
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .homeIcon {
+    width: 60px;
+    height: 60px;
+  }
+.textBackground {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 1200px;
+    position: relative; /* Allows for positioning of Save button */
+    margin: 0 auto; /* Centers the textBackground container */
+}
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:rgb(1, 117, 73);
+    text-align: center;
+}
+  
+.subtitle {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+.schoolsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .schoolCard {
+    background: linear-gradient(to left, #000429, #01a584);
+    border-radius: 12px;
+    padding: 16px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schoolName {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .programList {
+    margin-top: 10px;
+  }
+  
+  .programCard {
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .programCard p {
+    margin: 4px 0;
+  }
+  

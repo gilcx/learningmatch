@@ -1,20 +1,27 @@
+
 /* General layout */
 .container {
   display: flex;
-  height: 100vh;
+  flex-direction: row; /* Side-by-side layout */
+  justify-content: flex-start;
+  align-items: stretch; /* Make the content fill the remaining height */
+  background: linear-gradient(to bottom, #02836a, #01241d);
+  color: black;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+  width: 100%; /* Ensure container stretches across the viewport */
 }
 
 .sidebar {
-  width: 250px;
+  width: 290px; /* Adjust to whatever width you prefer */
+  position: fixed;
+  left: 0px;
+  top: 0;
+  bottom: 0;
   background: linear-gradient(to bottom, #02836a, #01241d);
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
 
+}
 .content {
   flex-grow: 1;
   background-color: white;
@@ -22,6 +29,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-height: 100%;
+  margin-left: 270px; /* Make room for the sidebar */
 }
 
 /* Menu Button Styling */
@@ -38,12 +47,13 @@
   align-items: center; /* Aligns icon and text vertically */
   gap: 10px; /* Space between icon and text */
   font-weight: bold;
-  width: 100%; /* Ensures all buttons have the same width */
+  width: 90%; /* Ensures all buttons have the same width */
   box-sizing: border-box; /* Includes padding in width calculations */
   text-align: center; /* Ensures text alignment */
   position: relative; /* Enables positioning adjustments */
   justify-content: center;
   margin-top: 30px;
+  margin-left:15px;
 }
 
 .menuButton img {
@@ -62,7 +72,7 @@
 
 /* Submenu Styling */
 .subMenu {
-  margin-left: 15px;
+  margin-left: 45px;
   margin-top: 5px;
 }
 
@@ -83,21 +93,19 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Logout Icon Styling */
-.icon {
-  width: 20px;
-  height: 20px;
-}
 
 /* Gradient text styling for LearningMatch */
 .gradientTextContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65%;
+  height: 25%;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column; /* Stacks the elements vertically */
+  align-items: center;    /* Centers the text horizontally */
+  margin-bottom: 20px;
 }
 
 .gradientText {
@@ -107,24 +115,228 @@
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
+.welcomeText {
+  font-size: 2.0rem;
+  color: #333; /* Or any color that matches your design */
+  margin-top: 10px;
+}
 
 /* Divided sections */
 .topSection {
   height: 65%;
   background-color: #f0f0f0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between; /* Spread the rectangles horizontally */
+  align-items: center; /* Vertically center the rectangles */
   border-radius: 12px;
+  padding: 20px; /* Add padding around the section */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 15px; /* Space between rectangles */
 }
 
+.topRectangleLeft {
+  background-color: #01a584; /* Teal color */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  width: 20%; /* Custom width for the left rectangle */
+  height: 100%; /* Custom height */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.topSection {
+  /* Other styles for the topSection */
+}
+
+.topRectangleLeft {
+  /* Other styles for the left rectangle */
+  padding: 20px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.linkText {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.linkItem:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.linkItem a {
+  display: flex;
+  align-items: center;
+}
+
+.topRectangleMiddle {
+  background-color: #028a74;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack title, slideshow, and description */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 5; /* Custom width proportion */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  gap: 15px; /* Space between title, image, and description */
+}
+
+/* Title styling */
+.topRectangleMiddle h2 {
+  font-size: 24px; /* Larger font size for title */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Slideshow container */
+.slideshow {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Ensure 16:9 ratio */
+  overflow: hidden; /* Prevent overflow of images */
+  position: relative; /* For absolute positioning of images */
+  border-radius: 8px;
+}
+
+/* Slideshow images */
+.slideshowImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Fit the image inside without cropping */
+  opacity: 0; /* Initially hide all images */
+  transition: opacity 0.5s ease-in-out; /* Quick fade-in/out */
+  animation: fadeSlideshow 19.5s infinite; /* Updated animation timing */
+  
+}
+
+.slideshowImage:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slideshowImage:nth-child(2) {
+  animation-delay: 6.5s; /* 6s display time + 0.5s fade-out */
+}
+
+.slideshowImage:nth-child(3) {
+  animation-delay: 13s;
+}
+
+/* Keyframes for fading slideshow */
+@keyframes fadeSlideshow {
+  0% { opacity: 0; } /* Image starts invisible */
+  2.5% { opacity: 1; } /* Image fades in over 0.5s */
+  30.5% { opacity: 1; } /* Image remains visible for 6s */
+  33% { opacity: 0; } /* Image fades out over 0.5s */
+  100% { opacity: 0; } /* Ensure image stays hidden after fading out */
+}
+.topRectangleMiddle span {
+  color: white; /* White text for contrast */
+  font-size: 22px;
+  display: inline-block;
+}
+.topRectangleRight {
+  
+  background-color: #006a5a; /* Even darker teal */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  width: 30%; /* Custom width for the right rectangle */
+  height: 100%; /* Custom height */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.topRectangleRight h2 {
+  font-size: 29px; /* Larger font size for title */
+  font-weight: bold;
+  margin: 0;
+}
+.programList {
+  padding-top: 10px;
+  width: 100%; /* Make sure the list takes up the full width */
+}
+
+.programItem {
+  background-color: white;
+  border-radius: 18px; /* Rounded corners */
+  padding: 12px;
+  margin-top: 16px; /* Space between items */
+  color: black; /* Adjust text color */
+  font-size: 1.1em;
+  display: center;
+  justify-content: space-between; /* Ensure program name and GPA are on opposite sides */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: slight shadow for depth */
+}
+
+.programItem:last-child {
+  margin-bottom: 0; /* Remove bottom margin for the last item */
+}
 .bottomSection {
   height: 35%;
   background-color: #e0e0e0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack title and items vertically */
+  align-items: flex-start; /* Align items to the left */
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 10px; /* Add space between title and items */
+}
+
+.bottomTitle {
+  font-size: 37px; /* Bigger font size for the title */
+  font-weight: bold;
+  color: #333; /* Darker text color for better visibility */
+}
+
+.todoItems {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 25px; /* Space between the items */
+  width: 100%; /* Ensure the items fit the container width */
+}
+
+
+.todoItems span {
+  background: linear-gradient(to left, #000429, #01a584);
+  color: white; /* White text for contrast */
+  padding: 18px 15px; /* Add padding inside the rectangle */
+  border-radius: 18px; /* Rounded edges */
+  font-size: 20px;
+  display: inline-block;
 }
