@@ -32,7 +32,7 @@ export async function POST(req) {
     }
 
     // Add the new user to the list
-    const newUser = { firstname: firstName, lastname: lastName, email, password };
+    const newUser = { firstName: firstName, lastName: lastName, email, password };
     users.push(newUser);
 
     // Write the updated users array back to the file

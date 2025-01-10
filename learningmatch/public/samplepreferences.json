@@ -33,5 +33,20 @@
     "currentcourses": {
       "asd": "123"
     }
+  },
+  {
+    "email": "testguy@email.com",
+    "grade": "11",
+    "province": "Ontario",
+    "highschool": "ABC",
+    "preferences": [
+      "Health",
+      "Technology",
+      "Arts & Design",
+      "Social Sciences"
+    ],
+    "currentcourses": {
+      "": ""
+    }
   }
 ]

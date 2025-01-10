@@ -18,9 +18,9 @@
     "password": "mypass"
   },
   {
-    "firstname": "Christian",
-    "lastname": "B",
-    "email": "christian@email.com",
-    "password": "eow"
+    "firstName": "Test",
+    "lastName": "Guy",
+    "email": "testguy@email.com",
+    "password": "test123"
   }
 ]
