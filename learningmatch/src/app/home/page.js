@@ -91,7 +91,7 @@ export default function Home() {
               </div>
               <div className={styles.linkItem}>
                 <img src="instagramicon.png" alt="Instagram" className={styles.icon} />
-                <a href="https://www.instagram.com/queensu" target="_blank" rel="noopener noreferrer" className={styles.linkText}>Instagram</a>
+                <a href="https://www.instagram.com/queensuniversity/" target="_blank" rel="noopener noreferrer" className={styles.linkText}>Instagram</a>
               </div>
               <div className={styles.linkItem}>
                 <img src="facebookicon.png" alt="Facebook" className={styles.icon} />
