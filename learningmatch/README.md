@@ -4,9 +4,9 @@
 
 To get started with the project, follow these steps:
 
-1. Navigate to the project directory:
+1. Navigate to the project directory (where package.json and other config files are):
    ```bash
-   cd learningmatch/
+   cd learningmatch/learningmatch
    ```
 
 2. Install the required dependencies:
