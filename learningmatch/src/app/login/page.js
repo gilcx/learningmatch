@@ -39,7 +39,7 @@ export default function Login() {
     <div className={styles.container}>
       <div className={styles.textBackground}>
         <span className={styles.gradientText}>LearningMatch</span>
-        <h1 className={styles.text}><strong>Create Account</strong></h1>
+        <h1 className={styles.text}><strong>Access your Account</strong></h1>
         
         <div className={styles.formContainer}>
           <form className={styles.form} onSubmit={handleLogin}>
